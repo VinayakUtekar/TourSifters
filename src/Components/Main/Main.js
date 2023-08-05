@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./Main.css";
 import {HiOutlineLocationMarker} from "react-icons/hi"
 import {HiOutlineClipboardCheck} from "react-icons/hi"
@@ -11,6 +11,8 @@ import img6 from '../../Media/img6.jpg'
 import img7 from '../../Media/img7.jpg'
 import img8 from '../../Media/img8.jpg'
 import img9 from '../../Media/img9.jpg'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 const Data = [
     {
@@ -107,10 +109,14 @@ const Data = [
 ]
 
 const Main = () =>{
+    useEffect(() => {
+        Aos.init({duration: 2000})
+    }, [])
+
     return(
         <section className="main container section">
             <div className="secTitle">
-                <h3 className="title">
+                <h3 data-aos="fade-up" className="title">
                     Most visited destinations
                 </h3>
             </div>
@@ -119,7 +125,7 @@ const Main = () =>{
                 {
                     Data.map(({id, imgSrc, destTitle, location, grade, fees, description })=>{
                         return(
-                            <div key={id} className="singleDestination">
+                            <div key={id} data-aos="fade-up" className="singleDestination">
                                 {
 
                                 }
