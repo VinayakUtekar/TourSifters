@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./Footer.css";
 import video2 from '../../Media/Footer-video.mp4'
 import {FiSend} from 'react-icons/fi'
@@ -8,8 +8,14 @@ import {AiOutlineTwitter} from "react-icons/ai"
 import {AiFillYoutube} from "react-icons/ai"
 import {AiFillFacebook} from "react-icons/ai"
 import {FiChevronRight} from "react-icons/fi"
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 const Footer = () =>{
+    useEffect(() => {
+        Aos.init({duration: 2000})
+    }, [])
+
     return(
         <section className="footer">
             <div className="videoDiv">
@@ -18,14 +24,14 @@ const Footer = () =>{
 
             <div className="secContent container">
                 <div className="contactDiv flex">
-                    <div className="text">
+                    <div data-aos="fade-up" className="text">
                         <small>Let's Explore World</small>
                         <h2>Take a journey with us</h2>
                     </div>
 
                     <div className="inputDiv flex">
-                        <input type="text" placeholder="Enter Email Address" />
-                        <button className="btn flex" type="submit">
+                        <input data-aos="fade-up" type="text" placeholder="Enter Email Address" />
+                        <button data-aos="fade-up" className="btn flex" type="submit">
                             SEND<FiSend className="icon" />
                         </button>
                     </div>
@@ -38,7 +44,7 @@ const Footer = () =>{
                             <MdOutlineTravelExplore className="icon"/>    TourShifters.
                             </a>
                         </div>
-                        <div className="footerParagraph">
+                        <div data-aos="fade-up" className="footerParagraph">
                             Explore the world with TourShifters, your ultimate travel companion. 
                             Our passion for wanderlust and commitment to seamless adventures 
                             drive us to curate unforgettable journeys for you. From idyllic beach 
@@ -48,15 +54,17 @@ const Footer = () =>{
                             perspective on travel. Bon voyage!
                         </div>
 
-                        <div className="footerSocials flex">
+                        <div data-aos="fade-up" className="footerSocials flex">
                             <AiOutlineTwitter className="icon"/>
                             <AiFillYoutube className="icon"/>
                             <AiFillInstagram className="icon"/>
                             <AiFillFacebook className="icon"/>
                         </div>
                     </div>
-                    <div className="footerLinks">
-                        <div className="linkGroup">
+                    <div className="footerLinks grid">
+
+                        {/*Group One*/}
+                        <div data-aos="fade-up" data-aos-duration="3000" className="linkGroup">
                             <span className="groupTitle">
                                 OUR AGENCY
                             </span>
@@ -86,6 +94,75 @@ const Footer = () =>{
                                 Payment
                             </li>
                         </div>
+
+                        {/*Group Two*/}
+                        <div data-aos="fade-up" data-aos-duration="4000" className="linkGroup">
+                            <span className="groupTitle">
+                                PARTNERS
+                            </span>
+
+                            <li className="footerList flex">
+                                <FiChevronRight className="icon" />
+                                Booking
+                            </li>
+
+                            <li className="footerList flex">
+                                <FiChevronRight className="icon" />
+                                Rentcars
+                            </li>
+
+                            <li className="footerList flex">
+                                <FiChevronRight className="icon" />
+                                HotelWorld
+                            </li>
+
+                            <li className="footerList flex">
+                                <FiChevronRight className="icon" />
+                                Trivage
+                            </li>
+
+                            <li className="footerList flex">
+                                <FiChevronRight className="icon" />
+                                TripAdvisor
+                            </li>
+                        </div>
+
+                        {/*Group Three*/}
+                        <div data-aos="fade-up" data-aos-duration="5000" className="linkGroup">
+                            <span className="groupTitle">
+                                LAST MINUTE
+                            </span>
+
+                            <li className="footerList flex">
+                                <FiChevronRight className="icon" />
+                                London
+                            </li>
+
+                            <li className="footerList flex">
+                                <FiChevronRight className="icon" />
+                                Californa
+                            </li>
+
+                            <li className="footerList flex">
+                                <FiChevronRight className="icon" />
+                                Asia
+                            </li>
+
+                            <li className="footerList flex">
+                                <FiChevronRight className="icon" />
+                                Europe
+                            </li>
+
+                            <li className="footerList flex">
+                                <FiChevronRight className="icon" />
+                                Oceania
+                            </li>
+                        </div>
+                    </div>
+
+                    <div className="footerDiv flex">
+                        <small>PREFERED TRAVEL WEBSITE THEME</small>
+                        <small>COPYRIGHTS RESERVED--VINAYAK UTEKAR</small>
                     </div>
                 </div>
             </div>
