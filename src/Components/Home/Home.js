@@ -65,7 +65,7 @@ const Home = () =>{
 
                     <div className="searchOptions flex">
                         <HiFilter className="icon"/>
-                        <span>MORE FILTERS</span>
+                        <span>MORE FILTERS...</span>
                     </div>
                 </div>
 
