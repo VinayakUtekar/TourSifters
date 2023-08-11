@@ -32,7 +32,7 @@ const Data = [
         destTitle: 'Glacier National Park',
         location: 'USA',
         grade: 'CULTURAL RELAX',
-        fees: '$700',
+        fees: '$900',
         description: 'Embark on an awe-inspiring adventure at Glacier National Park. Explore pristine wilderness, breathtaking glaciers, and diverse wildlife, creating unforgettable memories amidst natures grandeur and serenity.'
     },
 
